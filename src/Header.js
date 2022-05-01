@@ -17,7 +17,7 @@ const [{ basket },dispatch] = useStateValue();
         <Link to ="/">
          <img 
         className="header__logo"
-        src="https://i.pinimg.com/736x/f6/86/26/f686267024964788c16cc51d91fe6073--logo-s-logo-branding.jpg"/>
+        src="https://mpng.subpng.com/20180512/ive/kisspng-janet-mockler-jewellery-store-logo-5af78a8cbe0d79.1061652415261723007785.jpg"/>
         </Link>
        
 
@@ -31,7 +31,7 @@ const [{ basket },dispatch] = useStateValue();
         </div>
 
         <div className="header__nav">
-            
+            <Link to="/login">
             <div className='header__option'> 
                 <span className='header__optionLineOne'>
                 Hello Aditya </span>
@@ -39,6 +39,8 @@ const [{ basket },dispatch] = useStateValue();
                 Sign In</span>
             </div>
 
+            </Link>
+            
             <div className='header__option'> 
                 <span className='header__optionLineOne'>
                  Return </span>
