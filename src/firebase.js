@@ -2,18 +2,18 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDrw5YMv5wibFVDc-Y9on9EeQcGqCG_Sro",
-    authDomain: "e-jewellery-7324a.firebaseapp.com",
-    projectId: "e-jewellery-7324a",
-    storageBucket: "e-jewellery-7324a.appspot.com",
-    messagingSenderId: "303561739522",
-    appId: "1:303561739522:web:6aa8c1c41ba3182876861b",
-    measurementId: "G-PZHG2T8KZL"
-  };
+  apiKey: "AIzaSyDrw5YMv5wibFVDc-Y9on9EeQcGqCG_Sro",
+  authDomain: "e-jewellery-7324a.firebaseapp.com",
+  projectId: "e-jewellery-7324a",
+  storageBucket: "e-jewellery-7324a.appspot.com",
+  messagingSenderId: "303561739522",
+  appId: "1:303561739522:web:6aa8c1c41ba3182876861b",
+  measurementId: "G-PZHG2T8KZL"
+};
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-  const db= firebasApp.firestore();
+  const db= firebaseApp.firestore();
   const auth = firebase.auth();
 
-  export {db,auth};
+  export { db, auth };

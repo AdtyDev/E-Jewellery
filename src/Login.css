@@ -7,6 +7,7 @@
 }
 
 .login__logo{
+    display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
     object-fit: contain;
@@ -23,6 +24,8 @@
     border-radius: 5px;
     border: 1px solid darkgrey;
     padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .login__container > h1{
