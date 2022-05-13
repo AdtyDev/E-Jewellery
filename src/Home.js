@@ -19,7 +19,7 @@ function Home() {
                 title='Bracelet for men' 
                 price={700.00}
                 image="https://cdn.igp.com/f_auto,q_auto,t_pnopt7prodlp/products/p-gold-finish-men-s-chain-bracelet-140831-m.jpg"
-                rating={5}/>
+                rating={5}/> 
                 {/* Product 2*/}
                 <Product 
                 id="1234562"

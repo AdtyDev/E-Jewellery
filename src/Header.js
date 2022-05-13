@@ -4,21 +4,28 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 
 
 function Header() {
-const [{ basket },dispatch] = useStateValue();
+const [{ basket, user},dispatch] = useStateValue();
+
+const handleAuthentication = () =>{
+    if(user) {
+        auth.signOut();
+    }
+}
  
 
   return (
     <div className='header'>
         
-        <Link to ="/">
+        <a href="/home">
          <img 
         className="header__logo"
         src="https://mpng.subpng.com/20180512/ive/kisspng-janet-mockler-jewellery-store-logo-5af78a8cbe0d79.1061652415261723007785.jpg"/>
-        </Link>
+        </a>
        
 
         <div className="header__search">
@@ -31,15 +38,16 @@ const [{ basket },dispatch] = useStateValue();
         </div>
 
         <div className="header__nav">
-            <Link to="/login">
-            <div className='header__option'> 
-                <span className='header__optionLineOne'>
-                Hello Aditya </span>
-                <span className='header__optionLineTwo'>
-                Sign In</span>
+            <a href="/login">
+            <div onClick = {handleAuthentication}
+                className='header__option'> 
+                <span className='header__optionLineOne'>Hello, 
+                { !user ? 'Guest' : user?.email}</span>
+                <span className='header__optionLineTwo'>{user ?
+                'Sign Out': 'Sign In'}</span>
             </div>
 
-            </Link>
+            </a>
             
             <div className='header__option'> 
                 <span className='header__optionLineOne'>
@@ -55,7 +63,7 @@ const [{ basket },dispatch] = useStateValue();
                 prime</span>
             </div>
 
-            <Link to="/checkout">
+            <a href="/checkout">
             <div className="header__optionBasket">
                 <ShoppingBasketIcon/>
     
@@ -64,7 +72,7 @@ const [{ basket },dispatch] = useStateValue();
                  {basket?.length}
                  </span>
             </div>
-            </Link>
+            </a >
         </div>
     </div>
   )
