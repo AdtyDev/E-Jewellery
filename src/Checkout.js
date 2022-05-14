@@ -1,13 +1,22 @@
+import { ListItem } from "@mui/material";
 import React from "react";
 import "./Checkout.css";
+<<<<<<< HEAD
+=======
+import CheckoutProduct from "./CheckoutProduct";
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
 import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 import CheckoutProduct from "./CheckoutProduct";
 
 
 function Checkout() {
+<<<<<<< HEAD
   const [{ basket, user },dispatch] = useStateValue();
   
+=======
+  const [{ basket}, dispatch] = useStateValue();
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
   return (
     <div className="checkout">
         <div 
@@ -30,15 +39,26 @@ function Checkout() {
             title={item.title}
             image={item.image}
             price={item.price}
+<<<<<<< HEAD
             rating={item.rating} 
+=======
+            rating={item.rating}
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
             />
           ))}
 
           {/* CheckoutProduct */}
+<<<<<<< HEAD
           {/* CartItem */}
           {/* CartItem */}
           {/* CartItem */}
           {/* CartItem */}
+=======
+          {/* CheckoutProduct */}
+          {/* CheckoutProduct */}
+          {/* CheckoutProduct */}
+          {/* CheckoutProduct */}
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
 
         </div>
         </div>

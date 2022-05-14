@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  .checkoutProduct{
      display: flex;
      margin-top: 20px;
@@ -31,3 +32,40 @@
      font-size: 17px;
      font-weight: 800;
  }
+=======
+.checkoutProdcut{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.checkoutProdcut__info{
+    padding-left: 20px;
+
+}
+
+.checkoutProdcut__info >  button{
+    background-color: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88743 #9c7e31 #846a29;
+    color: #111;
+}
+
+.checkoutProdcut__image{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+
+
+.checkoutProdcut__rating{
+    display: flex;
+    font-weight: 800;
+}
+
+.checkoutProdcut__title{
+    font-size: 17px;
+    font-weight: 800;
+}
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01

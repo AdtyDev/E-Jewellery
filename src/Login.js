@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React,{useState} from "react"
 import { Link, useHistory } from "react-router-dom"
 import "./Login.css";
@@ -5,6 +6,15 @@ import { auth } from "./firebase";
 import userEvent from "@testing-library/user-event";
 
 function Login() {
+=======
+import React,{useState} from "react";
+import { Link, useHistory} from "react-router-dom";
+import { auth } from "./firebase";
+import "./Login.css";
+
+function Login() {
+
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,17 +23,26 @@ function Login() {
         e.preventDefault();
 
         auth
+<<<<<<< HEAD
             .signInWithEmailAndPassword(email, password)
             .then(auth =>{
                 history.push('./')
             })
             .catch(error => alert(error.message))
+=======
+        .signInWithEmailAndPassword(email,password)
+        .then(auth => {
+            history.push('/')
+        })
+        .catch(error => alert(error.message))
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
     }
 
     const register = e=>{
         e.preventDefault();
 
         auth
+<<<<<<< HEAD
             .createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 console.log(auth);
@@ -34,6 +53,17 @@ function Login() {
                 </a>
             })
             .catch(error => alert(error.message))
+=======
+        .createUserWithEmailAndPassword(email,password)
+        .then((auth) =>{
+            if (auth){
+                history.pushState('/')
+            }
+        })
+        .catch(error => alert(error.message))
+
+       
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
     }
     
   return (

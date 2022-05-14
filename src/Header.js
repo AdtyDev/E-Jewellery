@@ -9,11 +9,20 @@ import { auth } from "./firebase";
 
 
 function Header() {
+<<<<<<< HEAD
 const [{ basket, user},dispatch] = useStateValue();
 
 const handleAuthentication = () =>{
     if(user) {
         auth.signOut();
+=======
+const [{ basket, user },dispatch] = useStateValue();
+
+const handleAuthentication= ()=>{
+    if(user){
+        auth.signOut();
+
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
     }
 }
  
@@ -38,6 +47,7 @@ const handleAuthentication = () =>{
         </div>
 
         <div className="header__nav">
+<<<<<<< HEAD
             <a href="/login">
             <div onClick = {handleAuthentication}
                 className='header__option'> 
@@ -45,6 +55,14 @@ const handleAuthentication = () =>{
                 { !user ? 'Guest' : user?.email}</span>
                 <span className='header__optionLineTwo'>{user ?
                 'Sign Out': 'Sign In'}</span>
+=======
+            <Link to={!user && "/login"}>
+            <div onCLick={handleAuthentication}className='header__option'> 
+                <span className='header__optionLineOne'>
+                Hello Aditya </span>
+                <span className='header__optionLineTwo'>{user ? 'Sign Out': 'Sign In'}
+                </span>
+>>>>>>> 363cc64420e841bb6d7a9a8c2e4dd159f2aeca01
             </div>
 
             </a>
